@@ -1,0 +1,10 @@
+# ansible/main.yml
+---
+- name: Run all application playbooks
+  hosts: all
+  become: true
+  gather_facts: true
+  tasks:
+    - include_playbook: application1_playbook.yml
+#    - include_playbook: application2_playbook.yml
+#    - include_playbook: application3_playbook.yml
